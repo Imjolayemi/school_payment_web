@@ -30,6 +30,10 @@ section {
     margin: 20px;
 }
 
+aside li ul  li a{
+    color: white;
+}
+
 aside {
     width: 20%;
     background-color: #666;
@@ -56,3 +60,160 @@ footer {
     margin-left: 15px;
     border-radius: 5px;
 }
+
+/*dashboard Information in the mani page*/
+.dashboardInfo
+{
+    display: flex;
+    flex-flow: row wrap;
+    padding: 25px 40px;
+    justify-content: center;
+    border: 1px solid black;
+}
+
+.dashboardInfoSub
+{
+    display: flex;
+    /* flex-direction: row; */
+    padding: 25px 40px;
+    border: 1px solid black;
+    margin: 10px 10px;
+}
+
+/* tab design */
+.mytabs
+        {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 100%;
+            /* margin: 50px auto; */
+            padding: 25px;
+        }
+        
+        /* styling the radio input by hidding it */
+        .mytabs input[type="radio"]
+        {
+           display:none;
+          /*  margin-left: 15px; */
+        }
+
+        /* styling the label tag */
+        .mytabs label
+        {
+            padding: 15px;
+            background-color: #e2e2e2;
+            font-weight: bold;
+            /* margin: ; */
+        }
+
+        /* styling the tab */
+        .mytabs .tab
+        {
+            width: 100%;
+            padding: 20px;
+            background: white;
+            order: 1;
+            display: none;
+            margin-top: -0.5em;
+        }
+
+        .mytabs .tab h3
+        {
+            font-size: 2em;
+        }
+
+        /* displaying each tab */
+        .mytabs input[type="radio"]:checked + label + .tab
+        {
+            display: block;
+        }
+
+        /* styling the label background */
+        .mytabs input[type="radio"]:checked + label
+        {
+            background-color: white;
+        }
+
+/* student button */
+.nav-link
+{
+    background: none;
+    border: none;
+    color: #e2e2e2;
+}
+
+/* dasboard button */
+#dash_btn
+{
+    font-size: xx-large;
+}
+
+/* span with class nav-link */
+span[class=nav-link]
+{
+    cursor: pointer;
+}
+
+/* Parent form styling */
+.parent_form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* Form sections styling */
+.parent_form > div {
+    margin-bottom: 15px;
+}
+
+/* Form input styling */
+.parent_form input,
+.parent_form select {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+/* Form input focus styling */
+.parent_form input:focus,
+.parent_form select:focus {
+    outline: none;
+    background-color: #fff;
+    border-bottom: 1px solid #3498db;
+}
+
+/* Form button styling */
+.parent_form input[type="submit"] {
+    background-color: #3498db;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+/* Form button hover styling */
+.parent_form input[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+/* Media query for responsiveness */
+@media only screen and (max-width: 600px) {
+    .parent_form {
+        width: 90%;
+    }
+}
+
+
+
