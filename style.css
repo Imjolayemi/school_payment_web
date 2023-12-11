@@ -1,5 +1,5 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -208,6 +208,51 @@ span[class=nav-link]
     background-color: #2980b9;
 }
 
+/* parent login form design */
+.login-container {
+    width: 300px;
+    text-align: center;
+}
+
+.login-container h2 {
+    color: #333;
+}
+
+.login-form {
+    margin-top: 20px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #333;
+    outline: none;
+    background: transparent;
+    transition: border-bottom-color 0.3s;
+}
+
+.input-group input:focus {
+    border-bottom-color: #007bff;
+}
+
+.login-btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #0056b3;
+}
+
 /* Media query for responsiveness */
 @media only screen and (max-width: 600px) {
     .parent_form {
@@ -215,5 +260,38 @@ span[class=nav-link]
     }
 }
 
+/* setting class div */
+.set-class-container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
 
+h2 {
+    color: #333;
+}
 
+.set-class-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* border: 1px solid #ccc; */
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.set-class-div div {
+    flex: 1;
+    margin: 10px;
+}
+
+.set-class-div div input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 5px;
+}

@@ -33,6 +33,22 @@ if (isset($_POST["go"])){
         echo "Error: " . mysqli_error($connect);
     }
 }
+
+if (isset($_POST['set_class_btn']))
+{
+    $set_class = (isset($_POST["set_class"])) ? $_POST["set_class"] : "";
+    $year = (isset($_POST["year"])) ? $_POST["year"] : "";
+
+    $insert = "INSERT INTO classes (class, year) VALUES('$set_class', '$year')";
+
+    $insert_to_database = mysqli_query($connect, $insert) or die("Cannot insert to table".mysqli_connect_error());
+
+    if ($insert_to_database) {
+        echo '<script>alert ("Class Successfully added to database");</script>';
+    } else {
+        echo "Error: " . mysqli_error($connect);
+    }
+}
 ?>
 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" enctype="multipart/form-data">
 <section>
@@ -98,6 +114,15 @@ if (isset($_POST["go"])){
                     </li>
                 </ul>
             </li>
+
+            <li class="nav-item">
+                <button type="submit" name="class_btn" id="class_btn" class="nav-link" >Set classes and Year</button>
+            </li>
+
+            <li class="nav-item">
+                <button type="submit" name="textbook_btn" id="textbook_btn" class="nav-link" >Set Text-books for each class</button>
+            </li>
+
             <li class="nav-item">
                 <button type="submit" name="fee_btn" id="fee_btn" class="nav-link">Sign Out</button>
             </li>
@@ -117,7 +142,10 @@ if (isset($_POST["go"])){
             include "parent_form.php";
         }
         elseif (isset($_POST["existing_parent"])) {
-            include "existing_parent_form.php";
+            include "parent_login_page.php";
+        }
+        elseif (isset($_POST["class_btn"])) {
+            include "set_class.php";
         }else{
             include "dashboard_info.php";
         }
